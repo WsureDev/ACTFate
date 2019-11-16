@@ -534,6 +534,7 @@ namespace FFXIV_FATE_ACT_Plugin
         {
             try
             {
+/*
                 if (roulette != 0)
                 {
                     if (cheatRoulette)
@@ -542,6 +543,7 @@ namespace FFXIV_FATE_ACT_Plugin
                         return getTextRoulette(roulette);
                 }
                 else
+*/
                     return getTextInstance(code);
             }
             catch (Exception e)
@@ -607,7 +609,7 @@ namespace FFXIV_FATE_ACT_Plugin
                 text += args[i] + ((char)007);
             }
 
-            //sendToACT(text);
+            sendToACT(text);
             postToToastWindowsNotificationIfNeeded(server, eventType, args);
             postToURLIfNeeded(server, eventType, args);
             postToTTSIfNeeded(server, eventType, args);
